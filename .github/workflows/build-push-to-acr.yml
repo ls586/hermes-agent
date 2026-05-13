@@ -5,13 +5,11 @@ on:
     branches: [main]
 
 env:
-  # ----- 阿里云 ACR 配置（改成你自己的完整镜像地址）-----
   IMAGE_NAME: crpi-47tuusxlfu2z8ivm.cn-chengdu.personal.cr.aliyuncs.com/lsprivate/hermes-agent
 
 jobs:
   build-and-push:
-    # 可选：如果你不想让 fork 仓库触发，可保留该行并替换成你的仓库全名
-    # if: github.repository == 'your-username/your-repo'
+    if: github.repository == 'your-username/your-repo'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
