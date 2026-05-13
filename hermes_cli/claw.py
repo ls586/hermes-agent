@@ -86,6 +86,7 @@ def _detect_openclaw_processes() -> list[str]:
                 if exe in result.stdout.lower():
                     found.append(f"process: {exe}")
 
+            # test
             # Node.js-hosted OpenClaw — tasklist doesn't show command lines,
             # so fall back to PowerShell.
             ps_cmd = (
